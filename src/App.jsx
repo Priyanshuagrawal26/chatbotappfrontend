@@ -10,6 +10,7 @@ import { FaChevronDown } from "react-icons/fa";
 import { FaMicrophone } from "react-icons/fa";
 import { postAPI } from "./caller/axiosUrls";
 import UserDetailsForm from "./component/UserDetailsForm";
+import MargsoftLogo from "./assets/MargsoftLogo.ico"
 import axios from "axios";
 // import { fetchNearbyStores } from './component/FetchNearbyStores';
 import Markdown from "react-markdown";
@@ -239,7 +240,7 @@ const App = () => {
                   {t("MargSoft Bot")}
                 </p>
                 <img
-                  src="/src/assets/margsoftlogo.ico"
+                  src={MargsoftLogo}
                   alt="logo"
                   className="w-6 h-6 mb-1"
                 />
