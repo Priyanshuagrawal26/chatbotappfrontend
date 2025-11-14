@@ -239,11 +239,11 @@ const App = () => {
                 <p className="text-white text-[16px] font-semibold">
                   {t("MargSoft Bot")}
                 </p>
-                <img
+                {/* <img
                   src={MargsoftLogo}
                   alt="logo"
                   className="w-6 h-6 mb-1"
-                />
+                /> */}
               </div>
               <div className="flex gap-x-5 items-center">
                 {/* <div
