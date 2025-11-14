@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+body {
+  cursor: url('../src/assets/Cursor.ico'), auto;
+}
+
+
 .custom-popover {
   position: fixed;
   display: flex;
