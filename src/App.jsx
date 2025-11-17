@@ -10,7 +10,7 @@ import { FaChevronDown } from "react-icons/fa";
 import { FaMicrophone } from "react-icons/fa";
 import { postAPI } from "./caller/axiosUrls";
 import UserDetailsForm from "./component/UserDetailsForm";
-import MargsoftLogo from "./assets/MargsoftLogo.ico"
+import MargsoftLogo from "./assets/MargsoftLogo.ico";
 import axios from "axios";
 // import { fetchNearbyStores } from './component/FetchNearbyStores';
 import Markdown from "react-markdown";
@@ -510,10 +510,22 @@ const App = () => {
                   type="text"
                   onFocus={() => {
                     // if (!isChatStarted) {
-                    //     setShowUserForm(true);
+                    //   setShowUserForm(true);
                     // }
                   }}
-                  onChange={(e) => setInput(e.target.value)}
+                  onChange={(e) => {
+                    const value = e.target.value;
+
+                    // Count words
+                    const wordCount = value
+                      .trim()
+                      .split(/\s+/)
+                      .filter(Boolean).length;
+
+                    if (wordCount <= 150) {
+                      setInput(value);
+                    }
+                  }}
                   value={input}
                   onKeyDown={(e) => {
                     if (e.key === "Enter") handleSendMessage();
